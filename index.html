@@ -447,6 +447,47 @@
     .stat { border-right: none; border-bottom: 1px solid var(--green-line); }
     .stat:last-child { border-bottom: none; }
   }
+
+  /* ─── VIDEO HOVER PREVIEW ─── */
+  .video-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background: rgba(0,0,0,0.25);
+    transition: background 0.3s;
+  }
+  .video-overlay-btn {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-size: 20px;
+    padding-left: 4px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 0 0 0 rgba(76,175,80,0);
+  }
+  .video-card.is-previewing .video-overlay {
+    background: rgba(0,0,0,0.05);
+  }
+  .video-card.is-previewing .video-overlay-btn {
+    transform: scale(1.12);
+    box-shadow: 0 0 0 8px rgba(76,175,80,0.2);
+  }
+  .video-card.is-playing .video-overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .video-card.is-playing video {
+    z-index: 4;
+  }
 </style>
 </head>
 <body>
@@ -666,5 +707,51 @@
   })();
 </script>
 
+
+<script>
+  (function() {
+    document.querySelectorAll('.video-card').forEach(function(card) {
+      var video = card.querySelector('video');
+      if (!video) return;
+
+      video.removeAttribute('controls');
+      video.muted = true;
+
+      var overlay = document.createElement('div');
+      overlay.className = 'video-overlay';
+      overlay.innerHTML = '<div class="video-overlay-btn">&#9654;</div>';
+      card.appendChild(overlay);
+
+      card.addEventListener('mouseenter', function() {
+        if (card.classList.contains('is-playing')) return;
+        video.muted = true;
+        video.play().catch(function(){});
+        card.classList.add('is-previewing');
+      });
+
+      card.addEventListener('mouseleave', function() {
+        if (card.classList.contains('is-playing')) return;
+        video.pause();
+        video.currentTime = 0;
+        card.classList.remove('is-previewing');
+      });
+
+      overlay.addEventListener('click', function() {
+        video.muted = false;
+        video.controls = true;
+        video.currentTime = 0;
+        video.play().catch(function(){});
+        card.classList.add('is-playing');
+        card.classList.remove('is-previewing');
+      });
+
+      video.addEventListener('ended', function() {
+        card.classList.remove('is-playing', 'is-previewing');
+        video.controls = false;
+        video.currentTime = 0;
+      });
+    });
+  })();
+</script>
 </body>
 </html>
