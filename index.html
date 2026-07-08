@@ -493,10 +493,11 @@
   .carousel {
     position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 6px;
     border: 1px solid var(--green-line);
     background: var(--bg-3);
     user-select: none;
+    max-width: calc(50% - 10px);
   }
   .carousel-track {
     display: flex;
@@ -505,7 +506,7 @@
   }
   .carousel-slide {
     min-width: 100%;
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 9 / 16;
     overflow: hidden;
   }
   .carousel-slide img {
