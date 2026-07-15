@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rate Card — Mayor · UGC Creator</title>
+<meta name="description" content="UGC rates for Mayor (Mayowa Oladipo). Vertical video ads for tech, food and lifestyle brands. Full commercial rights included.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.mayorisugc.com/rate_card.html">
+<meta property="og:title" content="Rate Card — Mayor · UGC Creator">
+<meta property="og:description" content="Simple pricing. Full commercial rights. Delivered in 5–7 days.">
+<meta property="og:image" content="https://www.mayorisugc.com/og-image.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --bg: #000; --bg-2: #050505; --bg-3: #0a0a0a;
+    --green: #4caf50; --green-2: #2e7d32;
+    --green-tint: #0a1a0a; --green-line: #1a3a1a;
+    --text: #f2f2f2; --text-2: #a9a9a9; --text-3: #666;
+  }
+  html { scroll-behavior: smooth; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
+  .mono { font-family: 'JetBrains Mono', monospace; }
+  a { color: var(--green); text-decoration: none; }
+
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+  header { border-bottom: 1px solid var(--green-line); padding: 28px 0; }
+  header .wrap { display: flex; justify-content: space-between; align-items: center; }
+  .mark { font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 2px; font-size: 14px; }
+  .back { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 1px; color: var(--text-2); }
+  .back:hover { color: var(--green); }
+
+  .hero { padding: 72px 0 48px; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; font-size: 12px; letter-spacing: 3px; color: var(--green); text-transform: uppercase; margin-bottom: 18px; }
+  h1 { font-size: clamp(34px, 6vw, 56px); font-weight: 900; line-height: 1.05; letter-spacing: -1px; }
+  .hero p { color: var(--text-2); margin-top: 18px; max-width: 560px; line-height: 1.65; }
+
+  section { padding: 40px 0; }
+  h2 { font-size: 14px; font-family: 'JetBrains Mono', monospace; letter-spacing: 3px; color: var(--green); text-transform: uppercase; margin-bottom: 28px; }
+
+  .tiers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .tier { border: 1px solid var(--green-line); background: var(--bg-2); padding: 32px 26px; position: relative; }
+  .tier.featured { border-color: var(--green); background: var(--green-tint); }
+  .tier .tag { position: absolute; top: -11px; left: 24px; background: var(--green); color: #000; font-family: 'JetBrains Mono', monospace; font-size: 10px; font-weight: 700; letter-spacing: 2px; padding: 4px 10px; }
+  .tier .price { font-family: 'JetBrains Mono', monospace; font-size: 40px; font-weight: 700; }
+  .tier .price small { font-size: 15px; color: var(--text-3); font-weight: 400; }
+  .tier .name { margin-top: 6px; font-weight: 700; }
+  .tier .per { margin-top: 4px; font-size: 12.5px; color: var(--text-3); font-family: 'JetBrains Mono', monospace; }
+
+  .included { display: grid; grid-template-columns: 1fr 1fr; gap: 12px 32px; }
+  .included li { list-style: none; color: var(--text-2); font-size: 15px; line-height: 1.6; padding-left: 24px; position: relative; }
+  .included li::before { content: "✓"; color: var(--green); position: absolute; left: 0; font-family: 'JetBrains Mono', monospace; }
+
+  table { width: 100%; border-collapse: collapse; }
+  td { padding: 16px 8px; border-bottom: 1px solid #111; vertical-align: top; }
+  td:first-child { font-weight: 700; width: 42%; }
+  td:last-child { text-align: right; font-family: 'JetBrains Mono', monospace; color: var(--green); white-space: nowrap; }
+  td .sub { display: block; font-weight: 400; color: var(--text-3); font-size: 13px; margin-top: 4px; }
+
+  .terms { color: var(--text-2); font-size: 14.5px; line-height: 1.8; max-width: 640px; }
+  .terms strong { color: var(--text); }
+
+  .cta { border-top: 1px solid var(--green-line); padding: 64px 0 80px; text-align: center; }
+  .cta h3 { font-size: clamp(26px, 4vw, 38px); font-weight: 900; }
+  .cta em { color: var(--green); font-style: normal; }
+  .cta a.btn { display: inline-block; margin-top: 28px; background: var(--green); color: #000; font-family: 'JetBrains Mono', monospace; font-weight: 700; letter-spacing: 2px; font-size: 13px; padding: 16px 32px; transition: background .2s; }
+  .cta a.btn:hover { background: #5fc763; }
+  .cta .alt { margin-top: 16px; font-size: 13px; color: var(--text-3); }
+
+  footer { border-top: 1px solid #111; padding: 24px 0; }
+  footer .wrap { display: flex; justify-content: space-between; font-family: 'JetBrains Mono', monospace; font-size: 11.5px; color: var(--text-3); letter-spacing: 1px; }
+  footer .green { color: var(--green); }
+
+  @media (max-width: 760px) {
+    .tiers { grid-template-columns: 1fr; }
+    .included { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="mark">MAYOR / UGC</div>
+    <a class="back" href="index.html">← BACK TO PORTFOLIO</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <div class="hero">
+    <div class="eyebrow">Rate Card / 2026</div>
+    <h1>Simple pricing.<br>Full commercial rights.</h1>
+    <p>Every package includes scripting, filming, editing and captions — one creator, end to end. Prices in CAD. Product shipped or reimbursed in addition to rates below.</p>
+  </div>
+
+  <section>
+    <h2>Packages</h2>
+    <div class="tiers">
+      <div class="tier">
+        <div class="price">$100<small> CAD</small></div>
+        <div class="name">Single Video</div>
+        <div class="per">1 × 15–30s vertical</div>
+      </div>
+      <div class="tier featured">
+        <div class="tag">MOST BOOKED</div>
+        <div class="price">$250<small> CAD</small></div>
+        <div class="name">3-Video Bundle</div>
+        <div class="per">$83 / video · 3 angles or 3 hooks</div>
+      </div>
+      <div class="tier">
+        <div class="price">$400<small> CAD</small></div>
+        <div class="name">5-Video Pack</div>
+        <div class="per">$80 / video · test at scale</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Every Package Includes</h2>
+    <ul class="included">
+      <li>15–30 sec vertical video (TikTok / Reels / Shorts)</li>
+      <li>Hook + problem / solution / payoff structure</li>
+      <li>Script written by me, approved by you</li>
+      <li>Raw + captioned versions delivered</li>
+      <li>1 revision round</li>
+      <li>Full commercial usage rights, no expiry</li>
+      <li>5–7 day standard delivery</li>
+      <li>Native on-camera delivery — 174+ consecutive days of practice</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Add-Ons</h2>
+    <table>
+      <tr>
+        <td>Extra hook variation<span class="sub">Same video, alternate first 3 seconds — for A/B testing</span></td>
+        <td>+$25</td>
+      </tr>
+      <tr>
+        <td>Additional aspect ratio<span class="sub">16:9 or 1:1 re-edit of an existing video</span></td>
+        <td>+$15 / video</td>
+      </tr>
+      <tr>
+        <td>48-hour rush delivery<span class="sub">Bumped to front of queue</span></td>
+        <td>+50%</td>
+      </tr>
+      <tr>
+        <td>Organic posting<span class="sub">Video published natively on my TikTok or IG</span></td>
+        <td>+$50</td>
+      </tr>
+      <tr>
+        <td>Whitelisting / Spark Ads<span class="sub">Run paid ads from my handle, per 30 days</span></td>
+        <td>+$75 / mo</td>
+      </tr>
+      <tr>
+        <td>Extra revision round<span class="sub">Beyond the included revision</span></td>
+        <td>+$25</td>
+      </tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>Terms</h2>
+    <p class="terms">
+      <strong>50% deposit</strong> to book, balance on delivery. <strong>Product</strong> shipped to me or reimbursed before filming. Delivery window starts when product and brief are in hand. Payment by Interac e-Transfer (Canada) or PayPal. Bundles can mix niches. Raw footage stays available for 30 days after delivery.
+    </p>
+  </section>
+
+</div>
+
+<div class="cta">
+  <div class="wrap">
+    <h3>Ready to <em>book</em>?</h3>
+    <a class="btn" href="mailto:mayorisugc@gmail.com?subject=UGC%20Booking%20Inquiry">EMAIL MAYOR →</a>
+    <div class="alt">or DM <a href="https://instagram.com/no.hard.feelings20">@no.hard.feelings20</a> to see the daily journal first</div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div>© <span id="year">2026</span> MAYOR · UGC CREATOR</div>
+    <div class="green">RATES VALID 2026</div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
